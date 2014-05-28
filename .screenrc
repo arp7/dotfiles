@@ -1,0 +1,15 @@
+startup_message       off
+vbell                 off
+hardcopy_append       on
+defscrollback         10000
+msgwait               1       # Display message for 1 second. Default 5
+escape                ^x^x
+
+hardstatus alwayslastline "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= %H %c"
+
+# Number Windows starting at 1.
+bind c screen 1
+bind 0 select 10
+screen 1
+select 1
+

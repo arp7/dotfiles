@@ -1,0 +1,78 @@
+# -----------------------------------------------------------------------
+# Config file for use with tig version 2.0.2+
+# Works best with green text on black background terminals.
+# -----------------------------------------------------------------------
+
+set ignore-case = true
+set git-colors = no
+set horizontal-scroll = 33%
+set blame-options = -C -C -C -M
+set reference-format = (branch) <tag>
+set tab-size = 2
+set show-changes = true
+set split-view-height = 80%
+set refresh-mode = auto
+
+set main-view = \
+      id:true,width=7 \
+      date:short \
+      author:email,width=10 \
+      commit-title:graph=true,refs=true,overflow=57
+
+set tree-view = \
+      date:short \
+      author:email,width=15 \
+      id:yes,width=7 \
+      mode:no \
+      file-name:auto,width=0
+
+set blame-view = \
+      date:short \
+      author:email,width=10 \
+      id:yes,width=7 \
+      line-number:yes,interval=5 \
+      text
+
+
+bind generic      s           view-status
+bind generic      b           view-blame
+bind generic      t           view-tree
+bind generic      <F1>        view-help
+bind generic      q           none
+bind generic      G           move-last-line
+bind generic      /           search
+bind generic      ?           search-back
+bind generic      <F12>       view-close
+bind generic      q           view-close
+bind generic      <Ctrl-f>    scroll-page-down
+bind generic      <Ctrl-b>    scroll-page-up
+bind main         !           !git revert %(commit)
+bind main         p           !git pull --rebase
+bind diff         <F8>        :/^@@            # Jump to next chunk in diff view.
+bind diff         <F7>        :?^@@            # Jump to previous chunk in diff view.
+
+# Move in diff-view with arrow keys.
+#
+bind diff         <Up>        move-up
+bind diff         <Down>      move-down
+bind status       <Up>        move-up
+bind status       <Down>      move-down
+
+# Colors
+#
+color default                 green   black
+color date                    green   black
+color author                  cyan    black
+color main.graph-commit       white   black
+color file                    white   black
+color title-focus             white   black
+color header                  white   black
+color directory               cyan    black
+color diff-header             white   black
+color diff-index              cyan    black
+color diff-chunk              white   black
+color diff-add                yellow  black
+color diff-add2               green   black   bold
+color diff-del                cyan    black
+color diff-del2               cyan    black   bold
+

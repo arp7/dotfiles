@@ -1,0 +1,30 @@
+# General options
+#
+--ignore-case
+--nocolor
+--noheading
+
+# Make ack aware of a few extensions it does not know of.
+#
+--type-set=aspx=.aspx
+--type-set=cmd=.cmd
+--type-set=cmake=.cmake
+--type-set=jsp=.jsp
+--type-set=log=.log
+--type-set=out=.out
+--type-set=patch=.patch
+--type-set=properties=.properties
+--type-set=proto=.proto
+--type-set=sh=.sh
+--type-set=txt=.txt
+--type-set=vcxproj=.vcxproj
+--type-set=vm=.vm
+
+# Follow symlinks
+#
+--follow
+
+# Ignores
+#
+--ignore-dir=.git
+

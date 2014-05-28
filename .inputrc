@@ -1,0 +1,33 @@
+
+set bell-style none
+set completion-ignore-case on
+set completion-map-case on
+set expand-tilde on
+set convert-meta off
+set input-meta on
+set output-meta on
+set mark-directories on
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set page-completions on
+set skip-completed-text on
+set visible-stats on
+
+
+# Ctrl-F to cycle through autocomplete alternatives like Windows.
+#
+"\C-f": menu-complete
+Escape: kill-whole-line
+
+
+# These are to work around Home/End keys not working in iTerm2.
+# Probably not needed on Linux and can be commented out.
+#
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+"\e[3~": delete-char
+
+
+# Turn off for OSX, on for Linux.
+#
+#set print-completions-horizontally on
